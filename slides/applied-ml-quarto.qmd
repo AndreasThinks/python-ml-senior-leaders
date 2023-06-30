@@ -4,16 +4,9 @@ format:
   revealjs:
     embed-resources: true
     incremental: true  
-    logo: assets/logo.png
+    logo: assets/logo-transparent.png
     slide-number: true
 ---
-
-# What are we going to learn?
-
-- Exploring a real data science problem
-- Understanding how ML can and can't add value
-- Deploying and evaluating various approaches
-- Think about what might come next
 
 ## Today...
 
@@ -44,10 +37,10 @@ format:
 ::::
 
 # Understanding your data
-
-[The Kaggle Titanic Dataset](https://www.kaggle.com/competitions/titanic){preview-link="true"}
-
-... now we can begin exploring!
+## Getting Started
+- The tutorial can be found at bit.ly/ml-senior-leaders
+- We'll be spending most of today looking at [the Kaggle Titanic Dataset](https://www.kaggle.com/competitions/titanic){preview-link="true"}
+- So lets take a look at our data!
 
 ## Practical 1 - Exploring data
 
@@ -174,12 +167,22 @@ vb
 # From Stats to Machine Learning
 ## Testing and Validating
 - Traditional statistics often predicted "in sample"
-- Instead, we use test data [(WHICH IS WAY EASIER)](https://www.albert.io/blog/ultimate-properties-of-ols-estimators-guide/){preview-link="true"}
+- Instead, we use test data [(which is thankfully a lot less complicated)](https://www.albert.io/blog/ultimate-properties-of-ols-estimators-guide/){preview-link="true"}
+- How does that affect our model?
+
+## Practical 3 - Metrics
+
+## Meaningful testing and meaningful metrics
 - So think really hard about:
     - whether your test set is meaningful
     - what baseline performance is
+- The magic of ML is that we don't *need* to know what our data looks like
 
-## Practical 3 - Metrics
+## As they say on the internet...
+
+---
+
+![](assets/if-it-fits.png)
 
 ## Metrics that matter 
 ::: {.r-stack}
@@ -197,11 +200,12 @@ vb
 
 # Into the forest of ML
 
-## The Python ML Ecosystem
-- Core python ML approaches are bundled into a single library
-- [Get comfy with their documentation](https://scikit-learn.org/stable/user_guide.html){preview-link="true"}
+## The ML Ecosystem
+- We rarely have to implement ML from scratch in modern data science
+- In fact, it's often conveniently bundled!
+- [Which leads to daunting documentation!](https://scikit-learn.org/stable/user_guide.html){preview-link="true"}
 
-## The sklearn paradigm
+## So how easy is it?
 
 ```{.python code-line-numbers="|7,8,9"}
 from sklearn.datasets import load_iris
@@ -235,14 +239,10 @@ y_pred = gnb.predict(X_test)
 - Has your model performed better?
 - What is the implication for fit and variance?
 
-# Optional Materials
-
 ## Class Imbalance
 - How imbalanced is our model?
 - what impact do you think this has in reality?
-- There are a range of approaches:
-    - Weighted Errors
-    - Bespoke algorithms (SMOTE etc)
+- There are approaches to tackle this, but consider them early!
 
 
 ## Evidence House and the AI Digest
