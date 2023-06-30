@@ -83,54 +83,29 @@ fig.show()
 
 ## Practical 2 - Linear Models
 
-# From Stats to Machine Learning
-## Testing and Validating
-- Traditional statistics often predicted "in sample"
-- Instead, we use test data [(WHICH IS WAY EASIER)](https://www.albert.io/blog/ultimate-properties-of-ols-estimators-guide/){preview-link="true"}
-- So think really hard about:
-    - whether your test set is meaningful
-    - what baseline performance is
+# But fitting a line isn't AI!
 
-## Practical 3 - Metrics
+## Text and NLP 
+- We haven't used the name category at all
+- How would you extract value from it?
 
-## Metrics that matter 
-::: {.r-stack}
-![](assets/accuracy_recall.png){.fragment}
+---
 
-![](assets/metrics.png){.fragment}
+![](assets/tree4.jpeg)
 
-:::
+## Image Recognition
+- Thinking beyond tabular data, how could what you've learnt be applied to images?
 
-## Linear Models Recap
-- Linear models are generally excellent places to start
-- Use them to think about your data: how it's built, how it's connected, and what you're aiming to achieve
-- With a bit of work, [these can perform shockingly well](https://www.youtube.com/watch?v=68ABAU_V8qI){preview-link="true"}
-- but now it's time to go deeper
+---
 
-# Into the forest of ML
+![](assets/mnist-1.png)
 
-## The Python ML Ecosystem
-- Core python ML approaches are bundled into a single library
-- [Get comfy with their documentation](https://scikit-learn.org/stable/user_guide.html){preview-link="true"}
+---
 
-## The sklearn paradigm
+![](assets/mnist-2.png)
 
-```{.python code-line-numbers="|7,8,9"}
-from sklearn.datasets import load_iris
-from sklearn.model_selection import train_test_split
-from sklearn.naive_bayes import GaussianNB
+## But those aren't straight lines...
 
-X, y = load_iris(return_X_y=True)
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
-gnb = GaussianNB()
-gnb.fit(X_train, y_train)
-y_pred = gnb..predict(X_test)
-```
-## Practical 4 - Machine Learning
-
-# Cutting Edge Machine Learning (it's always XGBoost)
-
-## Gradient, Loss and Boosting - When lines get squiggly
 ```{python}
 #| echo: false
 #| output-location: slide
@@ -196,6 +171,54 @@ vb
 ```
 
 
+# From Stats to Machine Learning
+## Testing and Validating
+- Traditional statistics often predicted "in sample"
+- Instead, we use test data [(WHICH IS WAY EASIER)](https://www.albert.io/blog/ultimate-properties-of-ols-estimators-guide/){preview-link="true"}
+- So think really hard about:
+    - whether your test set is meaningful
+    - what baseline performance is
+
+## Practical 3 - Metrics
+
+## Metrics that matter 
+::: {.r-stack}
+![](assets/accuracy_recall.png){.fragment}
+
+![](assets/metrics.png){.fragment}
+
+:::
+
+## Linear Models Recap
+- Linear models are generally excellent places to start
+- Use them to think about your data: how it's built, how it's connected, and what you're aiming to achieve
+- With a bit of work, [these can perform shockingly well](https://www.youtube.com/watch?v=68ABAU_V8qI){preview-link="true"}
+- but now it's time to go deeper
+
+# Into the forest of ML
+
+## The Python ML Ecosystem
+- Core python ML approaches are bundled into a single library
+- [Get comfy with their documentation](https://scikit-learn.org/stable/user_guide.html){preview-link="true"}
+
+## The sklearn paradigm
+
+```{.python code-line-numbers="|7,8,9"}
+from sklearn.datasets import load_iris
+from sklearn.model_selection import train_test_split
+from sklearn.naive_bayes import GaussianNB
+
+X, y = load_iris(return_X_y=True)
+X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.5, random_state=0)
+gnb = GaussianNB()
+gnb.fit(X_train, y_train)
+y_pred = gnb.predict(X_test)
+```
+## Practical 4 - Machine Learning
+
+# Cutting Edge Machine Learning (it's always XGBoost)
+
+## Gradient, Loss and Boosting - When lines get squiggly
 - Neural networks approaches rely on *gradient descent* to maximise how well they fit
 - Gradient boosters rely on combining (or boosting models)
 - Combining your forecasts can be hugely effective
@@ -221,26 +244,6 @@ vb
     - Weighted Errors
     - Bespoke algorithms (SMOTE etc)
 
-# Where do we go from here?
-
-## Text and NLP 
-- We haven't used the name category at all
-- How would you extract value from it?
-
----
-
-![](assets/tree4.jpeg)
-
-## Image Recognition
-- Thinking beyond tabular data, how could what you've learnt be applied to images?
-
----
-
-![](assets/mnist-1.png)
-
----
-
-![](assets/mnist-2.png)
 
 ## Evidence House and the AI Digest
 
